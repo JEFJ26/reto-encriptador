@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="icon" href="icon.png" type="imagen/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="style/style.css" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <div class="grid">
+
+        <header class="logo">
+
+            <h1 id="h1">
+                <img src="Logo.png" alt="Logo Alura">
+            </h1>
+            
+        </header>
+        
+        
+
+        <main class="texarea contenedor">
+            <div>
+
+                <textarea class="textoUsuario" id="textoUsuario" placeholder="Ingresar el texto aqui"></textarea>
+
+                
+                <p class="indicacionesParaUsuario"><span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler  icon-tabler-alert-circle-filled" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 2c5.523 0 10 4.477 10 10a10 10 0 0 1 -19.995 .324l-.005 -.324l.004 -.28c.148 -5.393 4.566 -9.72 9.996 -9.72zm.01 13l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -8a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z" stroke-width="0" fill="currentColor" />
+                    </svg>
+                    </span>Solo letras minúsculas y sin acentos</p>
+                
+                <div class="botonesDeAccion">
+                    <button class="boton" onclick="botonEncriptar()"> Encritar</button>
+
+                    <button onclick="botonDesencriptar()" class="boton desencriptar">Desencriptar</button>
+                </div>
+                
+            </div>
+        </main>
+
+        <div class="fondoBlanco contenedor">
+            <div class="contenedorflex">
+                
+                <textarea class="respuestaUsuario oculto"  id="respuestaUsuario" readonly></textarea>
+                
+                <img class="muneco" src="Muñeco.svg" alt="Persona buscando texto">
+
+                <div class="esperandoTexto">
+                    <h2>Ningún mensaje fue encontrado</h2>
+
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+
+                <button id="copiar" onclick="copiarTexto()" class="boton desencriptar oculto">Copiar</button>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <p>Jhon Flores</p>
+    </footer>
+
+    <script src="programa.js"></script>
+    
+</body>
+</html>
